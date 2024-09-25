@@ -42,9 +42,10 @@ const navigate= useNavigate()
       image_url: imageUrl,
       first_brewed: firstBrewed,
       brewers_tips: brewersTips,
-      attenuation_level: attenuationLevel,
+      attenuation_level: Number(attenuationLevel),
       contributed_by: contributedBy,
     }
+    
     try {
       await axios.post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
 
